@@ -8,7 +8,7 @@ alias update='source ~/.bash_profile'
 git-run() {
   git add .
   if (( $# > 0 )); then
-    git commit -m "$@"
+    git commit -m "$1"
   else 
     git commit -m "editing" # default message for no commit
   fi
@@ -17,6 +17,11 @@ git-run() {
 
 branch() { 
   git branch | grep '*' | awk '{print $2}' 
+}
+
+git-config() {
+  git config user.name "tommy-couzens"
+  git config user.email "tom.czns@gmail.com"
 }
 
 # Deletes a branch locally and remotely
