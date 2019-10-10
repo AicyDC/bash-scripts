@@ -15,6 +15,16 @@ git-run() {
   git push
 }
 
+branch() { 
+  git branch | grep '*' | awk '{print $2}' 
+}
+
+# Deletes a branch locally and remotely
+git-delete() {
+  git branch -D "$1"
+  git push -d origin "$1"
+}
+
 ## Does a git pull for all repos below your current directory
 git-pull-all () {
   for dir in $(ls -d */); do
