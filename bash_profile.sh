@@ -4,6 +4,11 @@ alias prof='vi ~/.bash_profile'
 ## Update your current shell to use your new profile functions
 alias update='source ~/.bash_profile'
 
+mcd () {
+  mkdir $1
+  cd $1
+}
+
 ## Does all the steps for a push, with an optional input for commit message, otherwise defaults to "editing"
 git-run() {
   git add .
@@ -40,4 +45,9 @@ git-pull-all () {
     fi
     cd ..
   done
+}
+
+## Terraform
+terraform_variable() {
+    echo "$1 = \"\${var.$1}\""
 }
