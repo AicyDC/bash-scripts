@@ -28,7 +28,7 @@ then
 echo "Downloading terraform version ${version}"
 wget https://releases.hashicorp.com/terraform/${version}/terraform_${version}_${OS}.zip
 unzip terraform_${version}_${OS}.zip
-mv terraform terraform_${version} # always unzips as to the name terraform
+mv terraform /usr/local/bin/ # always unzips as to the name terraform
 rm terraform_${version}_darwin_amd64.zip
 fi
 
