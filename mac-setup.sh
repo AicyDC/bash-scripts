@@ -6,6 +6,12 @@ brew install hub
 brew install wget
 brew install shpotify
 
+## Install applications
+
+brew install cask
+brew cask install docker
+brew cask install skype
+brew cast install spotify
 
 # Set git as an alias for hub
 alias git='hub'

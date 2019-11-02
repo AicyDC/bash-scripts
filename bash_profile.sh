@@ -51,3 +51,7 @@ git-pull-all () {
 terraform_variable() {
     echo "$1 = \"\${var.$1}\""
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/a8201290/.sdkman"
+[[ -s "/Users/a8201290/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/a8201290/.sdkman/bin/sdkman-init.sh"
