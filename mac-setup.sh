@@ -12,6 +12,7 @@ brew install cask
 brew cask install docker
 brew cask install skype
 brew cast install spotify
+brew cask install whatsapp
 
 # Set git as an alias for hub
 alias git='hub'
