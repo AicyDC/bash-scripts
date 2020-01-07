@@ -9,6 +9,10 @@ brew install shpotify
 ## Install applications
 
 brew install cask
+brew cask install google-chrome
+brew cask install station
+brew cask install visual-studio-code
+brew cask install lastpass
 brew cask install docker
 brew cask install skype
 brew cast install spotify
