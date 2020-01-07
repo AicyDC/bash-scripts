@@ -18,6 +18,22 @@ brew cask install skype
 brew cast install spotify
 brew cask install whatsapp
 
+## Install pip
+sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python get-pip.py
+rm get-pip.py
+
+## Install terraform
+curl https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_darwin_amd64.zip -o terraform.zip
+unzip terraform.zip
+sudo mv terraform /usr/local/bin/
+rm -f terraform.zip
+terraform -version
+
+## Install aws-vault
+brew cask install aws-vault
+
+
 # Set git as an alias for hub
 alias git='hub'
 

@@ -55,3 +55,8 @@ terraform_variable() {
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/a8201290/.sdkman"
 [[ -s "/Users/a8201290/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/a8201290/.sdkman/bin/sdkman-init.sh"
+
+# Setting PATH for Python 3.8
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+export PATH
