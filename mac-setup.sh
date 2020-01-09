@@ -2,6 +2,8 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 ## Install command line tools
+brew install ag
+brew install gnupg
 brew install hub
 brew install wget
 brew install shpotify
@@ -14,6 +16,7 @@ brew cask install station
 brew cask install visual-studio-code
 brew cask install lastpass
 brew cask install docker
+brew cask install discord
 brew cask install skype
 brew cast install spotify
 brew cask install whatsapp

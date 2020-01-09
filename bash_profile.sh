@@ -1,5 +1,11 @@
+### Set path
+
+# Add python for aws
+export PATH="/Users/tommycouzens/Library/Python/3.8/bin:$PATH"
+
 ## Alias to go to and edit the bash profile
 alias prof='vi ~/.bash_profile'
+alias loadprof='source ~/.bash_profile'
 
 ## Update your current shell to use your new profile functions
 alias update='source ~/.bash_profile'
@@ -8,6 +14,9 @@ mcd () {
   mkdir $1
   cd $1
 }
+
+alias la='ls -a'
+alias ll='ls -l'
 
 ## Does all the steps for a push, with an optional input for commit message, otherwise defaults to "editing"
 git-run() {
@@ -19,6 +28,8 @@ git-run() {
   fi
   git push
 }
+
+alias gr='git-run'
 
 branch() { 
   git branch | grep '*' | awk '{print $2}' 
@@ -51,6 +62,8 @@ git-pull-all () {
 terraform_variable() {
     echo "$1 = \"\${var.$1}\""
 }
+
+alias tf='terraform'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/a8201290/.sdkman"
