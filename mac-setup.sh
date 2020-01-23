@@ -4,6 +4,7 @@
 ## Install command line tools
 brew install ag
 brew install gnupg
+brew install jq
 brew install hub
 brew install wget
 brew install shpotify
@@ -20,6 +21,9 @@ brew cask install discord
 brew cask install skype
 brew cast install spotify
 brew cask install whatsapp
+brew cask install postman
+brew cask install virtualbox
+brew cask install vagrant
 
 ## Install pip
 sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -39,6 +43,14 @@ brew cask install aws-vault
 
 # Set git as an alias for hub
 alias git='hub'
+
+# Change default screenshots folder 
+change_screenshots_folder() {
+  mkdir ~/Desktop/Screenshots
+  defaults write com.apple.screencapture location ~/Desktop/Screenshots
+  killall SystemUIServer
+}
+change_screenshots_folder
 
 
 ## Sym link the bash profile defined in this repo to yours
