@@ -55,10 +55,10 @@ awsp() {
 
   echo $AWS_PROFILE > ~/.awsp
 
-  alias aws="aws-profile -p $AWS_PROFILE aws"
-  alias kubectl="aws-profile -p $AWS_PROFILE kubectl"
-  alias helm="aws-profile -p $AWS_PROFILE helm"
-  alias terraform="aws-profile -p $AWS_PROFILE terraform"
+  for tool in aws kubectl helm terraform; do
+    alias $tool="aws-profile -p $AWS_PROFILE $tool"
+  done
+
   if [ -z $2 ]; then
     aws-profile -p $AWS_PROFILE aws eks update-kubeconfig --name $EKS_CLUSTER
   fi
