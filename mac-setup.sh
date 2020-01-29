@@ -8,6 +8,8 @@ brew install jq
 brew install hub
 brew install wget
 brew install shpotify
+brew install node # npm
+brew install minikube # kubernetes
 
 ## Install applications
 
