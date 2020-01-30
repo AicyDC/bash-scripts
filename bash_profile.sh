@@ -1,5 +1,9 @@
 #!/usr/local/bin/bash
 
+
+# Add python for aws
+export PATH="/Users/tommycouzens/Library/Python/3.8/bin:$PATH"
+
 git_branch() {
   git branch 2> /dev/null | grep '*' | awk '{print $2}' | sed 's/.*/(&)/'
 }
@@ -33,6 +37,15 @@ set_aliases() {
   alias tf='terraform'
 
   alias gr='git-run'
+
+  alias g='grep'
+  alias lsg='ls | grep'
+
+  # https://itnext.io/pimp-my-kubernetes-shell-f144710232a0
+  alias k=kubectl
+  alias kg='kubectl get'
+  alias kl='kubectl logs '
+  alias kx='kubectl exec -i -t'
 }
 
 # aws profile
@@ -123,5 +136,5 @@ main
 
 # Setting PATH for Python 3.8
 # The original version is saved in .bash_profile.pysave
-# PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
-# export PATH
+PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+export PATH
