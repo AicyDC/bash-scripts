@@ -4,6 +4,7 @@
 ## Install command line tools
 brew install ag
 brew install gnupg
+brew install vault
 brew install jq
 brew install hub
 brew install wget
@@ -26,6 +27,7 @@ brew cask install whatsapp
 brew cask install postman
 brew cask install virtualbox
 brew cask install vagrant
+brew install kube-ps1
 
 ## Install pip
 sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py

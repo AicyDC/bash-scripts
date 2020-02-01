@@ -51,6 +51,8 @@ set_aliases() {
 # aws profile
 awsp() {
   AWS_PROFILE=$1
+ 
+  # set a condition to return 0 if AWS_PROFILE = ~/.awsp as to not run the rest of this command for no point
 
   # Set the cluster name
   case "$AWS_PROFILE" in
